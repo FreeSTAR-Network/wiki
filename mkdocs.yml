@@ -1,0 +1,28 @@
+site_name: FreeSTAR Everywhere Wiki
+theme:
+  name: material
+  logo:
+    icon: material/star
+    image: https://freestar.network/files/freestar-everywhere
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+    - scheme: slate
+      primary: blue
+      accent: orange
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - About: about.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FreeSTAR-Network/freestar-everywhere-wiki
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true

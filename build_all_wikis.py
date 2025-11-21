@@ -32,7 +32,7 @@ def build_wiki(wiki_name):
     
     try:
         # Change to wiki directory and build
-        result = subprocess.run(
+        subprocess.run(
             ["mkdocs", "build", "-d", f"site"],
             cwd=wiki_path,
             check=True,

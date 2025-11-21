@@ -9,4 +9,4 @@ The mission of FreeSTAR Everywhere is to provide licensed amateur radio operator
 ## Contact
 
 - Website: [https://freestar.network](https://freestar.network)
-- GitHub: [FreeSTAR-Network/freestar-everywhere-wiki](https://github.com/FreeSTAR-Network/freestar-everywhere-wiki)
+- GitHub: [FreeSTAR-Network/wiki](https://github.com/FreeSTAR-Network/wiki)

@@ -1,4 +1,5 @@
 /* Modern, glossy custom styles for FreeSTAR Wiki */
+/* Note: Each wiki has its own copy of this CSS file to allow for future wiki-specific customizations */
 
 :root {
   --md-primary-fg-color: #3f51b5;

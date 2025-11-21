@@ -1,6 +1,6 @@
 # Welcome to FreeSTAR Everywhere Wiki
 
-![FreeSTAR Logo](https://freestar.network/files/freestar-everywhere.jpg)
+![FreeSTAR Logo](./docs/img/freestar-everywhere.jpg)
 
 This is the central documentation hub for the FreeSTAR Everywhere project.
 

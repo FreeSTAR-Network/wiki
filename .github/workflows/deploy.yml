@@ -30,8 +30,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build MkDocs site
-        run: mkdocs build
+      - name: Build all wikis
+        run: |
+          # Build each wiki
+          cd wikis/everywhere && mkdocs build && cd ../..
+          cd wikis/multi-mode && mkdocs build && cd ../..
+          cd wikis/systemx && mkdocs build && cd ../..
+          cd wikis/modulex && mkdocs build && cd ../..
+          
+          # Create main site directory
+          mkdir -p site/wikis
+          
+          # Copy built wikis to site
+          cp -r wikis/everywhere/site site/wikis/everywhere
+          cp -r wikis/multi-mode/site site/wikis/multi-mode
+          cp -r wikis/systemx/site site/wikis/systemx
+          cp -r wikis/modulex/site site/wikis/modulex
+          
+          # Copy main index
+          cp index.html site/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

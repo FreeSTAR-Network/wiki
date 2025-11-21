@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeSTAR Network Wiki Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .wiki-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .wiki-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .wiki-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .wiki-card .icon {
+            font-size: 2rem;
+        }
+
+        .wiki-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .wiki-card .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .wiki-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⭐ FreeSTAR Network Wiki Hub</h1>
+        <p class="subtitle">Comprehensive documentation for all FreeSTAR projects</p>
+
+        <div class="wiki-grid">
+            <a href="wikis/everywhere/site/index.html" class="wiki-card">
+                <h2><span class="icon">📞</span> FreeSTAR Everywhere</h2>
+                <p>Voice over Internet Protocol (VoIP) service designed exclusively for licensed amateur radio operators.</p>
+                <span class="badge">VoIP Platform</span>
+            </a>
+
+            <a href="wikis/multi-mode/site/index.html" class="wiki-card">
+                <h2><span class="icon">📡</span> FreeSTAR Multi-Mode</h2>
+                <p>Versatile multi-mode communication platform providing flexible options for amateur radio operations.</p>
+                <span class="badge">Multi-Mode Communication</span>
+            </a>
+
+            <a href="wikis/systemx/site/index.html" class="wiki-card">
+                <h2><span class="icon">🖥️</span> FreeSTAR SystemX</h2>
+                <p>Comprehensive network management system for coordinating and managing amateur radio networks.</p>
+                <span class="badge">Network Management</span>
+            </a>
+
+            <a href="wikis/modulex/site/index.html" class="wiki-card">
+                <h2><span class="icon">🧩</span> FreeSTAR ModuleX</h2>
+                <p>Modular component system for building flexible, custom amateur radio communication solutions.</p>
+                <span class="badge">Modular Framework</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="https://freestar.network" target="_blank">🌐 Official Website</a>
+                <a href="https://github.com/FreeSTAR-Network/wiki" target="_blank">💻 GitHub Repository</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                © 2025 FreeSTAR Network - Licensed Amateur Radio Operators
+            </p>
+        </div>
+    </div>
+</body>
+</html>

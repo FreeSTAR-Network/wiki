@@ -7,7 +7,7 @@ This guide helps you set up and begin using the platform.
 
 1. Clone the repository:
     ```
-    git clone https://github.com/FreeSTAR-Network/freestar-everywhere-wiki.git
+    git clone https://github.com/FreeSTAR-Network/wiki.git
     ```
 2. Install dependencies:
     ```
@@ -15,6 +15,7 @@ This guide helps you set up and begin using the platform.
     ```
 3. Serve locally:
     ```
+    cd wikis/everywhere
     mkdocs serve
     ```
 4. View your wiki at [localhost:8000](http://localhost:8000)

@@ -3,7 +3,6 @@
 Build all FreeSTAR wikis and create a unified documentation site.
 """
 
-import os
 import shutil
 import subprocess
 import sys

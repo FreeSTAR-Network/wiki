@@ -161,10 +161,10 @@ def hello_world():
    mkdir -p new-wiki/docs/stylesheets
    ```
 
-2. **Copy template files**:
+2. **Copy template files** (or copy from an existing wiki):
    ```bash
-   cp everywhere/mkdocs.yml new-wiki/
-   cp everywhere/docs/stylesheets/extra.css new-wiki/docs/stylesheets/
+   cp templates/new-wiki/mkdocs.yml new-wiki/
+   cp templates/new-wiki/docs/stylesheets/extra.css new-wiki/docs/stylesheets/
    ```
 
 3. **Update `mkdocs.yml`** with your wiki details:

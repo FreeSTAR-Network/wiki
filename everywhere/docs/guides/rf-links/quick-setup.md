@@ -1,6 +1,6 @@
 # FreeSTAR Everywhere RF-Link Node Owner Quick Setup Guide
 
-Connect your RF-Link node to FreeSTAR Everywhere using the details provided by the PBX admin.
+Connect your RF-Link node to FreeSTAR Everywhere using details provided by the PBX admin.
 
 ---
 
@@ -10,7 +10,7 @@ Connect your RF-Link node to FreeSTAR Everywhere using the details provided by t
 [freestar]
 type=user
 secret=YourStrongPassword         ; Provided by PBX admin
-context=radio-secure
+context=fsphone
 disallow=all
 allow=ulaw
 
@@ -33,7 +33,7 @@ EXTEN = 8001        ; Provided by PBX admin
 ## 3. Dialplan (`/etc/asterisk/extensions.conf` or HamVoIP GUI)
 
 ```ini
-[radio-secure]
+[fsphone]
 exten => ${EXTEN},1,Set(CALLSIGN=FS-${CALLERID(name)})
 exten => ${EXTEN},2,Ringing
 exten => ${EXTEN},3,Wait(2)
@@ -59,9 +59,9 @@ Or use the HamVoIP GUI "Reload."
 ## 5. Testing & Notes
 
 - Dial your assigned extension (e.g. 8001) from FreeSTAR Everywhere.
-- Your node’s callsign (FS-CALLSIGN) will appear in AllMon3/monitoring.
+- Callsign (FS-CALLSIGN) appears in AllMon3/monitoring.
 - EXTEN, username, password, and PBX IP must match PBX admin info.
-- NODE is your own RF node number.
+- NODE is your RF node number.
 
 ---
 

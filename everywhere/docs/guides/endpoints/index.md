@@ -8,5 +8,3 @@ You can connect up to 10 physical hardphones or softphone endpoints to a PJSIP e
 * [Soft Phone](./softphones/index.md) _- software applications for desktop or mobile devices_
 
 ---
-
-This isn’t an exhaustive list. If you notice something missing, you can [contribute](../everywhere/wiki/contributing.md) a guide to help us improve!

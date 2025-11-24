@@ -64,6 +64,7 @@ theme:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Guides: guides/index.md
   - About: about.md
   - Changelog: CHANGELOG.md
 

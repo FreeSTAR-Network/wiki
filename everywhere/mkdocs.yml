@@ -80,6 +80,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/FreeSTAR-Network/wiki
       name: FreeSTAR Network on GitHub
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/5075067229200822/
+      name: FreeSTAR International Facebook Group
     - icon: fontawesome/solid/globe
       link: https://freestar.network
       name: FreeSTAR Network Website

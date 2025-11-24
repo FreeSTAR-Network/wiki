@@ -23,7 +23,7 @@ Connectivity > Trunks > Add IAX2 Trunk
 
 ### Trunk Settings:
 
-Trunk Name: `freestar`
+Trunk Name: `southernfus`
 
 **Incoming:**
 ```ini

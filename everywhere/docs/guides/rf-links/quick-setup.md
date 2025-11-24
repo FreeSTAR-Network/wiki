@@ -43,7 +43,6 @@ exten => ${EXTEN},6,NoOp(Connected: ${CALLSIGN})
 exten => ${EXTEN},7,Rpt,${NODE}|P
 exten => ${EXTEN},8,Hangup
 ```
-
 ---
 
 ## 4. Reload

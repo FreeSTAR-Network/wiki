@@ -1,4 +1,4 @@
-# FreeSTAR Everywhere RF-Link Node Owner Quick Setup Guide (IAX Extension Method)
+# RF-Link Node Quick Setup Guide (IAX Extension Method)
 
 Register your RF-Link node as an IAX2 extension on FreeSTAR Everywhere. No trunk or outbound routes needed!
 
@@ -19,7 +19,6 @@ The PBX admin will use these details to create your IAX extension.
 
 ```ini
 [freepbx]
-host = PBX_SERVER_IP       ; <--- Replace with your PBX server's IP or hostname
 username = USERNAME        ; <--- Replace with your assigned IAX username
 secret = PASSWORD          ; <--- Replace with your assigned IAX password/secret
 type = user

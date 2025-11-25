@@ -15,10 +15,8 @@ disallow=all
 allow=ulaw
 
 ; Optional: Custom port example, if instructed by admin (default is 4569)
-bindport=4570
+; bindport=4570
 
-; Optional, if instructed:
-; register => rfnode12345:YourStrongPassword@PBX_IP/8001
 ```
 - **Default IAX2 port is UDP 4569.** Only set `bindport` if you and the PBX admin agree to use a custom port (e.g. 4570).
 
@@ -38,14 +36,12 @@ EXTEN = 8001        ; Provided by PBX admin
 
 ```ini
 [fsphone]
-exten => ${EXTEN},1,Set(CALLSIGN=FS-${CALLERID(name)})
-exten => ${EXTEN},2,Ringing
-exten => ${EXTEN},3,Wait(2)
-exten => ${EXTEN},4,Answer
-exten => ${EXTEN},5,Set(REMOTE=${CALLSIGN})
-exten => ${EXTEN},6,NoOp(Connected: ${CALLSIGN})
-exten => ${EXTEN},7,Rpt,${NODE}|P
-exten => ${EXTEN},8,Hangup
+exten => ${EXTEN},1,answer()
+exten => ${EXTEN},n,Playback(rpt/Connecting)
+exten => ${EXTEN},n,Playback(rpt/connected)
+exten => ${EXTEN},n,Set(CALLSIGN=FS-${CALLERID(name)})
+exten => ${EXTEN},n,rpt(${NODE}|P|${CALLSIGN})
+exten => ${EXTEN},n,Hangup
 ```
 
 ---

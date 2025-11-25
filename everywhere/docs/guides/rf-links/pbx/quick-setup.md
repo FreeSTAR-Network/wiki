@@ -7,7 +7,6 @@ This guide shows how to configure FreePBX 17 to connect and monitor a FreeSTAR E
 ## 1. PBX Admin: Assign RF-Link Credentials
 
 When a new RF-Link owner signs up, the PBX admin provides:
-- **Extension number** (e.g. `8001`)
 - **Username** (e.g. `rfnode12345`)
 - **Password/Secret** (e.g. `YourStrongPassword`)
 - **PBX Public IP or DNS** (e.g. `linkpbx.freestar.org`)
@@ -24,7 +23,7 @@ Connectivity > Trunks > Add IAX2 Trunk
 
 ### Trunk Settings:
 
-Trunk Name: `southernfus`
+Trunk Name: `gb3nm`
 
 **Incoming:**
 ```ini
@@ -41,13 +40,26 @@ qualify = yes                       ; Enables status monitoring (online/offline)
 
 ---
 
-## 3. Assign Extension for RF-Link
+## 3. Assign Extension for RF-Link (with Custom Dial String)
 
 **Navigation:**  
 Applications > Extensions > Add Custom Extension
 
 - **User Extension:** `8001`               ; Assigned by PBX admin
-- **Display Name:** `FS-RFNode`            ; Optional (e.g. FS-KM4UTR)
+- **Display Name:** `GB3NM-Link`           ; Optional
+- **Dial:** `IAX2/gb3nm/8001`              ; This makes PBX dial out via trunk "gb3nm" to this node
+
+> **IMPORTANT:**  
+> By default, a "Custom Extension" will not route calls anywhere unless you specify a destination using the "Dial" field.
+> The **Dial** field tells FreePBX how to route calls for this extension.  
+> Replace `gb3nm` with your trunk’s actual name if different, and `8001` with the correct node extension if needed.
+>
+> **Example:**  
+> ```
+> Dial: IAX2/gb3nm/8001
+> ```
+> 
+> If you skip this step, calls to `8001` will not go anywhere!
 
 ---
 
@@ -58,7 +70,7 @@ Connectivity > Outbound Routes > Add Outbound Route
 
 - **Route Name:** `RFLink`
 - **Dial Patterns:** `8001`
-- **Trunk Sequence:** `freestar`
+- **Trunk Sequence:** `gb3nm`
 
 ---
 
@@ -77,7 +89,7 @@ asterisk -rx "iax2 show peers"
 Look for:
 ```
 Name/Username  Host               Status
-freestar       203.0.113.30       OK (10 ms)
+gb3nm          203.0.113.30       OK (10 ms)
 ```
 
 ---
@@ -101,7 +113,7 @@ freestar       203.0.113.30       OK (10 ms)
 ## 8. Onboarding Flow Summary
 
 1. **RF-Link owner signs up for service.**
-2. **PBX admin allocates extension, username, password, and PBX server address.**
+2. **PBX admin allocates username, password, and PBX server address.**
 3. **RF-Link owner configures node with provided details.**
 
 ---

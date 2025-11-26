@@ -94,12 +94,6 @@ Or use your control GUI’s "Reload" function.
 
 ---
 
-## Online Tools
-
-Use the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create your IAX2 dial string.
-
-Use the [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-generator/) to generate your `iax.conf` and `extensions.conf` configurations.
-
 ## Support
 
 [https://support.freestareverywhere.com](https://support.freestareverywhere.com)

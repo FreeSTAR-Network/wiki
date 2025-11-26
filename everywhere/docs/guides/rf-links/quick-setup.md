@@ -29,7 +29,7 @@ Open a ticket with [https://support.freestareverywhere.com](https://support.free
 - **Username:** The identifier you wish to use for your RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port you wish to use for IAX (usually 4569, or specify a custom port if required).
-- **IAX String:** The string you need to provide the PBX admin to confugure your extension. Use the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create this.
+- **IAX String:** The string you need to provide the PBX admin to configure your extension. Use the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create this.
 
 The PBX admin will use these details to create your IAX extension.
 

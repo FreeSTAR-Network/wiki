@@ -17,7 +17,7 @@ The PBX admin will use these details to create your IAX extension.
 
 ---
 
-## 2. Configure RF-Link Node (`/etc/asterisk/iax.conf`)
+## 2. Configure RF-Link Node Example (`/etc/asterisk/iax.conf`)
 
 ```ini
 ;FreeSTAR Everywhere PBX Connection
@@ -33,12 +33,13 @@ transfer = no
 
 ---
 
-## 3. Dialplan Setup (`/etc/asterisk/extensions.conf`)
+## 3. Dialplan Example Setup (`/etc/asterisk/extensions.conf`)
 
 ```ini
 [fsphone]
 exten => ${NODE},1,answer()
 exten => ${NODE},n,Playback(rpt/Connecting)
+exten => ${NODE},n,Wait(2)
 exten => ${NODE},n,Playback(rpt/connected)
 exten => ${NODE},n,Set(CALLSIGN=FS-${CALLERID(name)})
 exten => ${NODE},n,rpt(${NODE}|P|${CALLSIGN})

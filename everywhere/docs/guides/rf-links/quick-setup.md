@@ -1,6 +1,6 @@
 # RF-Link Node Quick Setup Guide (IAX Extension Method)
 
-Register your RF-Link node as an IAX2 extension on FreeSTAR Everywhere. No trunk or outbound routes needed!
+Register your RF-Link node as an IAX2 extension on FreeSTAR Everywhere.
 
 ---
 

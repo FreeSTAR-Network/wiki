@@ -25,8 +25,7 @@ Ensure you have the following details from the RF-Link node owner:
   Unique number for this extension (choose any unused number).
 - **Display Name:** (e.g. `RF-Link Node`)
 - **Secret:** Enter the password supplied by the RF-Link node owner.
-- **Port:** Leave as default (4569), change if needed.
-- **Context:** `fsphone` (must match node's dialplan context).
+- **Port:** Leave as default (4569), or change to specified port.
 - **CallerID:** Set as desired.
 - **Dial:** `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE
 
@@ -34,9 +33,9 @@ Ensure you have the following details from the RF-Link node owner:
 
 ---
 
-## 3. Example Dial String
+## 3. RF-Link Owner Provides Dial String
 
-To dial the RF-Link node from FreePBX, use a dial string in the following format:
+To dial the RF-Link node from FreePBX, use a dial string is used in the following format:
 
 ```text
 IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE
@@ -45,21 +44,21 @@ IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE
 ```text
 IAX2/freestar:passw0rd@40071.nodes.allstarlink.org:4580/40071
 ```
-- Replace `freestar` with the **username**.
+- Replace `freestar` with the **username**. Normally callsign of node owner or club call.
 - Replace `passw0rd` with the **password/secret**.
 - Replace `40071.nodes.allstarlink.org` with the **node’s public DNS** or IP.
 - Replace `4580` with the **IAX port** (if not the default `4569`).
-- Replace the final `/40071` with the **desired extension** on the RF-Link node (typically its node number).
+- Replace the final `/40071` with the **desired AllStar Node** on the RF-Link node (typically its node number or private node number).
 
-You can use this dial string wherever you configure outbound routes, custom extensions, or follow-me destinations in FreePBX to reach the RF-Link node.
-Use Dial String Generator if in doubt! [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/)
+You can use this dial string wherever you configure IAX extensions, outbound routes, custom extensions, or follow-me destinations in FreePBX to reach the RF-Link node.
+Direct the RF-Link applicant to provide dial string using the Dial String Generator [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/)
 
 ---
 
 ## 4. Configure PBX to Connect to RF-Link Node
 
 **Optional if NAT/firewall is present:**  
-If your PBX is behind a firewall, ensure outbound UDP traffic to the node’s IP and IAX port is permitted.
+If your PBX is behind NAT / firewall, ensure outbound UDP traffic to the node’s IP and IAX port is permitted.
 
 ---
 
@@ -70,7 +69,8 @@ If your PBX is behind a firewall, ensure outbound UDP traffic to the node’s IP
    asterisk -rx "iax2 show peers"
    ```
    - Look for your new RF-Link extension in the list.
-   - Status should show "Unmonitored" or "OK" if the node is reachable.
+   - Status should show "OK" if the node is reachable. "Green" BLF
+   - If the node is "UNKNOWN" or "OFFLINE" then BLF will be "Grey"
 
 2. Try calling the new extension using the dial string above, or from a SIP phone or another extension.
    - The call should route to the RF-Link node and trigger its dialplan.

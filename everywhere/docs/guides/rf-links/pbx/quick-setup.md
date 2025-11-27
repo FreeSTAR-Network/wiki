@@ -4,18 +4,16 @@ This guide explains how to create an IAX2 extension in FreePBX 17 so your PBX ca
 
 ---
 
-## 1. Gather Required Information
+## 1. Gather Required Information from RF-Link Applicant
 
 Ensure you have the following details from the RF-Link node owner:
-- **Callsign:** The callsign of the individual or club of the RF-link owner
-- **Username:** The identifier for the RF-Link node IAX extension (normally the callsign)
-- **Password:** The secret/password for this extension (at least 10 digits - use a STRONG PASSWORD!)
-- **Host:** The node's hostname or IP address (e.g., `40071.nodes.allstarlink.org`)
-- **IAX Port:** The UDP port for IAX (usually 4569, or a custom port if specified)
-- **Node Number:** The AllStar node number to connect to
-- **Dial String:** The complete connection string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE` (obtain from RF-Link owner)
+- **Callsign:** The callsign of the individual or club applying for the RF-link.
+- **Extension Name:** The RF-Link display name (phonebook) 
+- **IAX String:** The string they need to provide to the PBX admin to configure their extension. Direct them to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create this.
+- **Licence Document:** Copy of the license document for callsign or club.
+- **Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`
 
-The RF-Link owner should provide a dial string using the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/).
+Once extension is set up, supply RF-Link owner with extension number (8000-8999)
 
 ---
 

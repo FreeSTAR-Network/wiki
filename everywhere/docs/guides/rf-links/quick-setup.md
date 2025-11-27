@@ -58,13 +58,13 @@ FreeSTAR Everywhere provides two helpful web-based tools to assist with configur
 
 ### IAX2 String Generator
 
-The [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) helps you create the IAX2 dial string needed to connect to your AllStar node. Use this tool to generate the correct dial string format for your node configuration.
+The [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) helps you create the IAX2 dial string needed to connect to your AllStar node. Use this tool to generate the correct dial string format for your node configuration and PBX admin request.
 
 ![IAX2 String Generator](../../assets/iax2string-generator.png)
 
 ### IAX2 Config Generator
 
-The [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-generator/) helps you generate the configuration for your AllStar node's `iax.conf` and `extensions.conf` files. Simply enter your node details and the tool will create the correct configuration blocks for you.
+The [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-generator/) helps you generate the configuration for your AllStar node's `iax.conf` and `extensions.conf` files. Simply enter your IAX2 dial string you created in the IAX2 String Generator and the tool will create the correct configuration blocks for you.
 
 ![IAX2 Config Generator](../../assets/iax2config-generator.png)
 

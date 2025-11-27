@@ -9,9 +9,8 @@ This guide explains how to create an IAX2 extension in FreePBX 17 so your PBX ca
 Ensure you have the following details from the RF-Link node owner:
 - **Callsign:** The callsign of the individual or club applying for the RF-link.
 - **Extension Name:** The RF-Link display name (phonebook) 
-- **IAX String:** The string they need to provide to the PBX admin to configure their extension. Direct them to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create this.
 - **Licence Document:** Copy of the license document for callsign or club.
-- **Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`
+- **IAX Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`. Direct the applicant to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/)
 
 Once extension is set up, supply RF-Link owner with extension number (8000-8999)
 

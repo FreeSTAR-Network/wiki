@@ -10,7 +10,7 @@ Ensure you have the following details from the RF-Link node owner:
 - **Callsign:** The callsign of the individual or club applying for the RF-link.
 - **Extension Name:** The RF-Link display name (phonebook) 
 - **Licence Document:** Copy of the license document for callsign or club.
-- **IAX Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`. Direct the applicant to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/). Dial string must be obstained from RF-Link applicant to complete the setup of the extension.
+- **IAX Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`. Direct the applicant to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/). Dial string must be obtained from RF-Link applicant to complete the setup of the extension.
 
 Once extension is set up, supply RF-Link owner with extension number (8000-8999)
 

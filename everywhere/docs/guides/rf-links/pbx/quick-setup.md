@@ -13,6 +13,7 @@ Ensure you have the following details from the RF-Link node owner:
 - **Host:** The node's hostname or IP address (e.g., `40071.nodes.allstarlink.org`)
 - **IAX Port:** The UDP port for IAX (usually 4569, or a custom port if specified)
 - **Node Number:** The AllStar node number to connect to
+- **Dial String:** The complete connection string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE` (obtain from RF-Link owner)
 
 The RF-Link owner should provide a dial string using the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/).
 
